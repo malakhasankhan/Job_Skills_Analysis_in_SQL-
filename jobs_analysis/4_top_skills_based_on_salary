@@ -1,0 +1,20 @@
+/*
+ -- Look at the average salary associated with each skill for Data Analyst positions. 
+ -- Focuses on Roles with specified salary, regardless of location. 
+ -- Will help us understand how different skills impact salary levels for Data Analysis 
+ */
+SELECT skills.skills,
+    AVG(salary_year_avg) AS average_salaries
+FROM job_postings_fact AS jobs
+    LEFT JOIN skills_job_dim ON jobs.job_id = skills_job_dim.job_id
+    LEFT JOIN skills_dim AS skills ON skills_job_dim.skill_id = skills.skill_id
+WHERE salary_year_avg IS NOT NULL
+    AND job_title_short = 'Data Analyst'
+GROUP BY skills.skills
+ORDER BY average_salaries DESC
+    /*
+     Here's a breakdown of the results for top paying skills 
+     -- High demand for Big Data and ML Skills: Top salaries for specialised and niche tools 
+     -- 2nd Highest demand for Software Developmenent and Deployment Proficiency 
+     -- 3rd Highest Demand for Cloud Computing Enterprise - Familiarity with Cloud Solutions
+     */
