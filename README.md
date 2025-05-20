@@ -64,6 +64,17 @@ The data was parsed from structured job listings and analyzed using SQL. Each qu
 - Startup roles can offer higher pay than titles suggest—don't overlook them.
 - High-paying skills aren't always the most frequently listed ones. Choose your stack strategically.
 
+## Tools Used
+
+- **PostgreSQL**: Used to run and test all SQL queries against structured job listings data. Provided a powerful relational database interface for data exploration and aggregation.
+- **SQLite**: Used during early data exploration and for lightweight testing of queries before porting to PostgreSQL.
+- **VS Code**: Primary development environment for writing and debugging SQL scripts, Python visualizations, and markdown documentation.
+- **Git**: Version control system for managing iterative changes to queries, analysis scripts, and documentation.
+- **GitHub**: Hosted the project repository, enabling collaboration, issue tracking, and showcasing of analytics insights through README and visual outputs.
+
+## Dateset Used
+- Dataset for this analysis was provided by Luke Barousse as part of the Learn SQL in 4 Hours Yotube Video.
+
 ## How to Reproduce
 
 1. Clone the repository:
